@@ -1,7 +1,8 @@
 // Import express
 const express = require("express");
 const multer = require("multer");
- 
+ const cors = require("cors")
+
 const multerStorage = multer.diskStorage({
  
   destination: (req, file, cb) => {
@@ -28,6 +29,7 @@ const PORT = process.env.PORT || 8080;
  
 // Create instance of express.
 const app = express();
+app.use(cors())
 
 // Include express.json() middleware
 app.use(express.json());
