@@ -24,7 +24,7 @@ const multerStorage = multer.diskStorage({
 // Use diskstorage option in multer
 const upload = multer({ storage: multerStorage });
  
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8080;
  
 // Create instance of express.
 const app = express();
