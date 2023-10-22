@@ -24,7 +24,7 @@ const multerStorage = multer.diskStorage({
 // Use diskstorage option in multer
 const upload = multer({ storage: multerStorage });
  
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
  
 // Create instance of express.
 const app = express();
@@ -41,7 +41,7 @@ app.get("/", (req, res) => {
 });
  
 // Create a POST endpoint for '/upload' route
-app.post("/upload", upload.single("myFile"), (req, res) => {
+app.post("/upload/images", upload.single("myFile"), (req, res) => {
     console.log("Body: ", req.body);
     console.log("File: ", req.file);
     res.send("File successfully uploaded.");
