@@ -41,7 +41,7 @@ app.get("/", (req, res) => {
 });
  
 // Create a POST endpoint for '/upload' route
-app.post("/upload/images", upload.single("myFile"), (req, res) => {
+app.post("/upload", upload.single("myFile"), (req, res) => {
     console.log("Body: ", req.body);
     console.log("File: ", req.file);
     res.send("File successfully uploaded.");
